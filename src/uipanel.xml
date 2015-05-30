@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<VBox skin:Paint-border="1"  skin:Paint-color="0x5BFF5B" w="250">
+	<Button text= "'Randomize'" on-click="clouds.Params.seed = Math.round(Math.random()*10000);" />
+    <Widget layout:Column-cols="[80, -1]" w="250" h="17">
+		<Text text="'Threshold:'" />
+		<Slider  skin:Paint-border="1" min="0" max="254"  value="clouds.Params.threshold" h="25" slider-w = "50" slider-heightPt = "100" slider-skin:Paint-color = "0xFF0000" on-change="clouds.Params.threshold = Math.round($this.value);" />
+	</Widget>
+    <Widget layout:Column-cols="[80, -1]" w="250" h="17">
+		<Text text="'Shade angel:'" />
+		<Slider  skin:Paint-border="1" min="0" max="360"  value="clouds.Params.shade" h="25" slider-w = "50" slider-heightPt = "100" slider-skin:Paint-color = "0xFF0000" on-change="clouds.Params.shade = Math.round($this.value);" />
+	</Widget>
+    <Widget layout:Column-cols="[80, -1]" w="250" h="17">
+		<Text text="'Density:'" />
+		<Slider  skin:Paint-border="1" min="0" max="254"  value="clouds.Params.period" h="25" slider-w = "50" slider-heightPt = "100" slider-skin:Paint-color = "0xFF0000" on-change="clouds.Params.period = Math.round($this.value);" />
+	</Widget>
+    <Widget layout:Column-cols="[80, -1]" w="250" h="17">
+		<Text text="'Smoothness:'" />
+		<Slider  skin:Paint-border="1" min="0" max="7"  value="clouds.Params.octaves" h="25" slider-w = "50" slider-heightPt = "100" slider-skin:Paint-color = "0xFF0000" on-change="clouds.Params.octaves = Math.round($this.value);" />
+	</Widget>
+
+	<Toggle skin:Paint-border="1" states-up-text = "'Fractal: [__]'" states-down-text = "'Fractal: [V]'" selected="clouds.Params.fractal"  on-change="clouds.Params.fractal = $this.selected;" />
+</VBox>
